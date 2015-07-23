@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "Github Line Counter",
+	"version": "0.0.1",
+	"description": "Handy display of the number of lines in a Github repository.",
+	"icons": {
+		"19":"icon19.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19":"images/icon19.png",
+			"128":"images/icon128.png"
+		},
+		"default_title": "Github Line Counter"
+	},
+	"author": "Dave Ankin, Sheerin Pak",
+	"permissions": ["activeTab","http://ankin.info/*", "https://ankin.info/*"],
+	"content_scripts": [{
+		"matches": ["https://github.com/*"],
+		"js": ["jquery.js", "app.js"]
+	}],
+	"offline_enabled": false,
+	"version_name": "GH Line Count"
+}
